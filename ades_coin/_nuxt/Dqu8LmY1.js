@@ -1,1 +1,0 @@
-import{O as d}from"./UbqMnDbG.js";const e=d("adminStore",{state:()=>({admins:[]}),actions:{addAdmin(i){this.admins.push(i)},updateAdmin(i,s){this.admins[i]=s},deleteAdmin(i){this.admins.splice(i,1)}}});export{e as u};
