@@ -105,8 +105,8 @@
     <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
       <!-- Logo -->
       <a href="/" class="text-xl font-bold text-white">B&amp;P Data Consulting</a>
-      <!-- Mobile Hamburger (using black text for visibility) -->
-      <button id="menuBtn" class="md:hidden text-black focus:outline-none" aria-label="Toggle menu">
+      <!-- Mobile Hamburger (using white text for visibility) -->
+      <button id="menuBtn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
         <i class="fas fa-bars text-2xl"></i>
       </button>
       <!-- Desktop Menu -->
@@ -117,16 +117,26 @@
         <li><a href="/contacts/" class="hover:text-blue-200">Contact</a></li>
       </ul>
     </nav>
-    <!-- Mobile Menu (Material Card Style) -->
-    <div id="mobileMenu" class="absolute top-16 left-0 w-full bg-white text-black shadow-lg hidden md:hidden">
-      <ul class="flex flex-col p-4 space-y-2">
-        <li><a href="/" class="nav-item-mobile hover:text-blue-600">Home</a></li>
-        <li><a href="/about/" class="nav-item-mobile hover:text-blue-600">About</a></li>
-        <li><a href="/services/" class="nav-item-mobile hover:text-blue-600">Services</a></li>
-        <li><a href="/contacts/" class="nav-item-mobile hover:text-blue-600">Contact</a></li>
-      </ul>
-    </div>
   </header>
+
+  <!-- =============== MOBILE MENU DRAWER & OVERLAY =============== -->
+  <!-- Drawer Menu (slides in from the left) -->
+  <div id="mobileMenu"
+    class="fixed inset-y-0 left-0 w-64 bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+    <!-- Close Button -->
+    <button id="closeMenu" class="p-4 focus:outline-none">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="flex flex-col p-4 space-y-2">
+      <li><a href="/" class="nav-item-mobile hover:text-blue-600">Home</a></li>
+      <li><a href="/about/" class="nav-item-mobile hover:text-blue-600">About</a></li>
+      <li><a href="/services/" class="nav-item-mobile hover:text-blue-600">Services</a></li>
+      <li><a href="/contacts/" class="nav-item-mobile hover:text-blue-600">Contact</a></li>
+    </ul>
+  </div>
+  <!-- Drawer Overlay -->
+  <div id="mobileMenuOverlay" class="fixed inset-0 bg-black opacity-50 hidden md:hidden z-40"></div>
+
 
   <!-- =============== HERO SECTION WITH VANTA.NET BACKGROUND =============== -->
   <section id="hero">
@@ -170,8 +180,8 @@
             </a>
           </div>
         </div>
-        <div class="flex justify-center" data-aos="fade-left">
-          <img src="data_visualization1.svg" alt="Innovative Data Visualization" class="w-3/4 animate-bounce-slow">
+        <div class="flex justify-center" data-aos="fade-up">
+          <img src="data_visualization1.svg" alt="Innovative Data Visualization" class=" animate-bounce-slow">
         </div>
       </div>
 
@@ -357,8 +367,8 @@
   <footer class="bg-gray-900 text-gray-300 py-8">
     <div class="max-w-7xl mx-auto px-4 grid gap-8 md:grid-cols-3">
       <!-- Column 1: Contact Info -->
-      <div data-aos="fade-up">
-        <h3 class="text-xl font-bold text-white mb-4">B&amp;P Data Consulting</h3>
+      <div data-aos="fade-up" class="text-center md:text-left">
+        <h3 class="text-center md:text-left font-bold text-white mb-4">B&amp;P Data Consulting</h3>
         <p class="text-gray-400 mb-2">
           First Floor, Afriland Building<br>
           Marché Ndogpassi 3, Village - Douala
@@ -367,31 +377,33 @@
         <p class="text-gray-400">+237-671593-128</p>
       </div>
       <!-- Column 2: Quick Links & Social Icons -->
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="200" class="text-center md:text-left">
         <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
         <ul class="space-y-2 mb-4">
           <li>
-            <a href="/" class="text-gray-400 hover:text-white flex items-center">
+            <a href="/" class="text-gray-400 hover:text-white flex items-center justify-center md:justify-start">
               <i class="bi bi-arrow-right text-blue-500 mr-2"></i>Home
             </a>
           </li>
           <li>
-            <a href="/about/" class="text-gray-400 hover:text-white flex items-center">
+            <a href="/about/" class="text-gray-400 hover:text-white flex items-center justify-center md:justify-start">
               <i class="bi bi-arrow-right text-blue-500 mr-2"></i>About Us
             </a>
           </li>
           <li>
-            <a href="/services/" class="text-gray-400 hover:text-white flex items-center">
+            <a href="/services/"
+              class="text-gray-400 hover:text-white flex items-center justify-center md:justify-start">
               <i class="bi bi-arrow-right text-blue-500 mr-2"></i>Services
             </a>
           </li>
           <li>
-            <a href="/contacts/" class="text-gray-400 hover:text-white flex items-center">
+            <a href="/contacts/"
+              class="text-gray-400 hover:text-white flex items-center justify-center md:justify-start">
               <i class="bi bi-arrow-right text-blue-500 mr-2"></i>Contact Us
             </a>
           </li>
         </ul>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4 justify-center">
           <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
           <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin-in"></i></a>
@@ -414,6 +426,7 @@
       © <span class="text-white font-semibold">B&amp;P Data Consulting</span>. All Rights Reserved.
     </div>
   </footer>
+
 
   <!-- =============== BACK TO TOP BUTTON =============== -->
   <div id="backToTop" class="back-to-top" title="Back to top">
@@ -475,7 +488,7 @@
 
     // Mobile Menu Toggle
     const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    // const mobileMenu = document.getElementById("mobileMenu");
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
@@ -499,15 +512,45 @@
       }
     });
 
+
+    // Mobile Menu Drawer Functionality
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+    const closeMenuBtn = document.getElementById("closeMenu");
+
     menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.add("translate-x-0");
+      mobileMenuOverlay.classList.remove("hidden");
     });
 
+    closeMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenuOverlay.classList.add("hidden");
+    });
+
+    mobileMenuOverlay.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenuOverlay.classList.add("hidden");
+    });
+
+    // Hide drawer when a mobile nav link is clicked
     document.querySelectorAll(".nav-item-mobile").forEach(link => {
       link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenuOverlay.classList.add("hidden");
       });
     });
+
+
+    // menuBtn.addEventListener("click", () => {
+    //   mobileMenu.classList.toggle("hidden");
+    // });
+
+    // document.querySelectorAll(".nav-item-mobile").forEach(link => {
+    //   link.addEventListener("click", () => {
+    //     mobileMenu.classList.add("hidden");
+    //   });
+    // });
 
     // Back to Top Button
     const backToTop = document.getElementById("backToTop");
