@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>B&amp;P Data Consulting</title>
+  <title>B&amp;P Data Consulting | About Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tailwind CSS -->
@@ -76,7 +76,7 @@
       display: flex;
     }
 
-    /* Custom slow-bounce animation for the SVG image */
+    /* Custom slow-bounce animation for any SVG imagery */
     @keyframes slow-bounce {
 
       0%,
@@ -96,7 +96,7 @@
 
   <!-- Vanta and Three.js libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
 
 <body class="text-gray-800">
@@ -110,190 +110,144 @@
         <i class="fas fa-bars text-2xl"></i>
       </button>
       <!-- Desktop Menu -->
-      <ul id="navLinks" class="hidden md:flex space-x-6 text-white font-medium transition-colors duration-300">
-        <li><a href="/" class="hover:text-blue-200">Home</a></li>
-        <li><a href="/about/" class="hover:text-blue-200">About</a></li>
-        <li><a href="/services/" class="hover:text-blue-200">Services</a></li>
-        <li><a href="/contacts/" class="hover:text-blue-200">Contact</a></li>
+      <ul id="navLinks" class="hidden md:flex space-x-6 font-medium transition-colors duration-300">
+        <li>
+          <a href="/" class="nav-item-mobile hover:text-orange-500">Home</a>
+        </li>
+        <li>
+          <a href="/about/"
+            class="nav-item-mobile bg-orange-500 text-white py-2 px-4 rounded-full outline-none">About</a>
+        </li>
+        <li>
+          <a href="/services/" class="nav-item-mobile hover:text-orange-500">Services</a>
+        </li>
+        <li>
+          <a href="/contacts/" class="nav-item-mobile hover:text-orange-500">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>
 
   <!-- =============== MOBILE MENU DRAWER & OVERLAY =============== -->
-  <!-- Drawer Menu (slides in from the left) -->
   <div id="mobileMenu"
     class="fixed inset-y-0 left-0 w-64 bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
-    <!-- Close Button -->
     <button id="closeMenu" class="p-4 focus:outline-none">
       <i class="fas fa-times"></i>
     </button>
     <ul class="flex flex-col p-4 space-y-2">
-      <li><a href="/" class="nav-item-mobile hover:text-blue-600">Home</a></li>
-      <li><a href="/about/" class="nav-item-mobile hover:text-blue-600">About</a></li>
-      <li><a href="/services/" class="nav-item-mobile hover:text-blue-600">Services</a></li>
-      <li><a href="/contacts/" class="nav-item-mobile hover:text-blue-600">Contact</a></li>
+      <li><a href="/" class="nav-item-mobile hover:text-orange-500">Home</a></li>
+      <li><a href="/about/"
+          class="nav-item-mobile bg-orange-500 text-white py-2 px-4 rounded-full outline-none">About</a></li>
+      <li><a href="/services/" class="nav-item-mobile hover:text-orange-500">Services</a></li>
+      <li><a href="/contacts/" class="nav-item-mobile hover:text-orange-500">Contact</a></li>
     </ul>
   </div>
-  <!-- Drawer Overlay -->
   <div id="mobileMenuOverlay" class="fixed inset-0 bg-black opacity-50 hidden md:hidden z-40"></div>
 
-
-  <!-- =============== HERO SECTION WITH VANTA.NET BACKGROUND =============== -->
+  <!-- =============== HERO SECTION =============== -->
   <section id="hero">
     <!-- Vanta.js effect will be applied to this section -->
     <div class="absolute inset-0 flex items-center justify-center">
       <div class="text-center text-white px-4" data-aos="fade-up">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          Data-Driven<br class="hidden lg:block" />
-          <span class="text-orange-500">Software Solutions</span>
-        </h1>
-        <p class="text-lg md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">
-          Empower your business with smart insights.
-        </p>
-        <!-- Contact button removed from hero; now in footer -->
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">About Us</h1>
+        <p class="text-lg md:text-2xl mb-8">Pioneering Data-Driven Innovation</p>
       </div>
     </div>
   </section>
 
-  <!-- =============== CONTENT SECTION =============== -->
+  <!-- =============== ABOUT CONTENT SECTION =============== -->
   <section class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-4">
-
-      <!-- Innovate with Data Section -->
-      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center" data-aos="fade-up">
+      <!-- Our Story -->
+      <div class="grid md:grid-cols-2 gap-8 items-center" data-aos="fade-up">
         <div>
-          <h2 class="text-4xl font-bold mb-2">Innovate with Data</h2>
+          <h2 class="text-3xl font-bold mb-4">Our Story</h2>
+          <p class="text-gray-700 text-lg mb-4">
+            At B&amp;P Data Consulting, we turn raw data into clear, actionable insights that empower your business
+            to thrive. Our journey began with a vision to harness data for innovation and sustainable growth.
+          </p>
           <p class="text-gray-700 text-lg">
-            At B&P Data Consulting, we craft data strategies that unlock hidden opportunities and fuel growth.
-            Our cutting-edge analytics and innovative software design transform your business into a dynamic,
-            data-driven organization.
+            With a fusion of technical expertise and creative problem-solving, we craft elegant, material-inspired
+            solutions that seamlessly blend form with function.
           </p>
-          <p class="text-gray-700 text-lg mt-4">
-            We help turn your data into a competitive advantage with solutions that drive growth and success.
-            Our team specializes in predictive analytics, AI-powered automation, and strategic planning tailored to your
-            business needs.
-          </p>
-          <div class="mt-4">
-            <a href="/about/"
-              class="inline-block bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-500 transition">
-              Learn More
-            </a>
-          </div>
         </div>
         <div class="flex justify-center" data-aos="fade-up">
-          <img src="data_visualization1.svg" alt="Innovative Data Visualization" class=" animate-bounce-slow">
+          <img src="about_illustration.svg" alt="Our Story Illustration" class="w-full max-w-md rounded-lg shadow-lg">
         </div>
       </div>
 
-      <!-- How We Operate as Cards -->
-      <div class="bg-gray-50 rounded-lg p-8 mb-16" data-aos="fade-up">
-        <h2 class="text-2xl text-center font-bold mb-8 text-orange-500">How We Operate</h2>
-        <div class="grid gap-8 md:grid-cols-3">
-          <!-- Card 1 -->
-          <div
-            class="bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl transition-transform transform hover:scale-105">
+      <!-- Mission, Vision & Values -->
+      <div class="mt-16" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Core Principles</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105">
             <div class="flex items-center justify-center mb-4">
-              <i class="fas fa-chart-line text-4xl text-blue-600"></i>
+              <i class="fas fa-bullseye text-4xl text-blue-600"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">Customer Insight</h3>
+            <h3 class="text-xl font-semibold mb-2 text-center">Our Mission</h3>
             <p class="text-gray-700 text-center">
-              Leverage data to understand and predict customer behavior.
+              Empower businesses with data-driven strategies that inspire growth.
             </p>
           </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl transition-transform transform hover:scale-105">
+          <div class="bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105">
             <div class="flex items-center justify-center mb-4">
               <i class="fas fa-lightbulb text-4xl text-yellow-500"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">Strategic Planning</h3>
+            <h3 class="text-xl font-semibold mb-2 text-center">Our Vision</h3>
             <p class="text-gray-700 text-center">
-              Develop scalable, cost-effective data strategies that drive growth.
+              Leading the transformation of data into strategic excellence.
             </p>
           </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl transition-transform transform hover:scale-105">
+          <div class="bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105">
             <div class="flex items-center justify-center mb-4">
-              <i class="fas fa-robot text-4xl text-green-600"></i>
+              <i class="fas fa-heart text-4xl text-red-500"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">Smart Solutions</h3>
+            <h3 class="text-xl font-semibold mb-2 text-center">Our Values</h3>
             <p class="text-gray-700 text-center">
-              Integrate AI and ML for advanced automation.
+              Innovation, integrity, and a customer-first mindset.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- What We Do Section -->
-      <div>
-        <h2 class="text-3xl text-center font-bold mb-4 uppercase" data-aos="fade-up">What We Do</h2>
-        <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
-          <!-- Card 1 -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-transform transform hover:scale-105">
-            <h3 class="text-xl font-semibold mb-2 uppercase text-orange-500">Data Collection</h3>
-            <p class="text-gray-700 mb-4">
-              Gather quality data that drives success.
-            </p>
-            <a href="/service_details/1/" class="text-blue-600 font-medium flex items-center">
-              Read more <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-transform transform hover:scale-105">
-            <h3 class="text-xl font-semibold mb-2 uppercase text-orange-500">Data Analytics</h3>
-            <p class="text-gray-700 mb-4">
-              Transform data into actionable insights.
-            </p>
-            <a href="/service_details/2/" class="text-blue-600 font-medium flex items-center">
-              Read more <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-transform transform hover:scale-105">
-            <h3 class="text-xl font-semibold mb-2 uppercase text-orange-500">Training &amp; Consultancy</h3>
-            <p class="text-gray-700 mb-4">
-              Equip your team with the skills to harness data.
-            </p>
-            <a href="/service_details/3/" class="text-blue-600 font-medium flex items-center">
-              Read more <i class="bi bi-arrow-right ml-2"></i>
-            </a>
-          </div>
+      <!-- Why Choose Us -->
+      <div class="mt-16 grid md:grid-cols-2 gap-8 items-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-center">
+          <img src="about_additional_info.svg" alt="Why Choose Us" class="w-full max-w-md rounded-lg shadow-lg">
         </div>
-        <div class="text-center mt-6" data-aos="fade-up" data-aos-delay="300">
-          <a href="/services/"
-            class="inline-block bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-500 transition">
-            More Services
-          </a>
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Why Choose Us?</h2>
+          <p class="text-gray-700 text-lg mb-4">
+            Our passion for data is matched only by our commitment to delivering tailored solutions that solve your
+            unique challenges.
+          </p>
+          <p class="text-gray-700 text-lg">
+            Partner with us for a transparent, creative, and results-driven journey toward excellence.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =============== MEET THE TEAM SECTION =============== -->
-  <section id="team" class="py-16  bg-gray-100">
+  <!-- =============== TEAM SECTION (Swiper Slider) =============== -->
+  <section id="team" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl text-center font-bold mb-8" data-aos="fade-up">Meet the Team</h2>
-
-      <!-- Swiper Slider Container -->
+      <h2 class="text-3xl text-center font-bold mb-8" data-aos="fade-up">Meet Our Team</h2>
       <div class="swiper mySwiper" data-aos="fade-up">
         <div class="swiper-wrapper">
           <!-- Team Member 1 -->
           <div class="swiper-slide">
-            <div class="bg-white rounded-lg p-8 text-center border border-gray-200">
-              <img src="https://bpdataconsulting.com/static/web/img/team11.jpg" alt="John Doe"
+            <div class="bg-white rounded-lg p-8 text-center shadow-xl">
+              <img src="https://bpdataconsulting.com/static/web/img/team11.jpg" alt="Isabel Stewart"
                 class="w-24 h-24 rounded-full mx-auto mb-4">
               <h3 class="text-xl font-semibold">Isabel Stewart</h3>
-              <p class="text-gray-700">CEO and Managing Director</p>
+              <p class="text-gray-700">CEO &amp; Managing Director</p>
             </div>
           </div>
           <!-- Team Member 2 -->
           <div class="swiper-slide">
-            <div class="bg-white rounded-lg p-8 text-center border border-gray-200">
-              <img src="https://bpdataconsulting.com/static/web/img/boris1.jpg" alt="Jane Smith"
+            <div class="bg-white rounded-lg p-8 text-center shadow-xl">
+              <img src="https://bpdataconsulting.com/static/web/img/boris1.jpg" alt="Boris Mikwa"
                 class="w-24 h-24 rounded-full mx-auto mb-4">
               <h3 class="text-xl font-semibold">Boris Mikwa</h3>
               <p class="text-gray-700">Senior Data Scientist</p>
@@ -301,74 +255,38 @@
           </div>
           <!-- Team Member 3 -->
           <div class="swiper-slide">
-            <div class="bg-white rounded-lg p-8 text-center border border-gray-200">
-              <img src="https://bpdataconsulting.com/static/web/img/team-3.jpeg" alt="Alice Brown"
+            <div class="bg-white rounded-lg p-8 text-center shadow-xl">
+              <img src="https://bpdataconsulting.com/static/web/img/team-3.jpeg" alt="Pius Ngwa"
                 class="w-24 h-24 rounded-full mx-auto mb-4">
               <h3 class="text-xl font-semibold">Pius Ngwa</h3>
-              <p class="text-gray-700">Applied Scientist & AI Innovation Lead</p>
+              <p class="text-gray-700">Applied Scientist &amp; AI Innovation Lead</p>
             </div>
           </div>
-
           <!-- Team Member 4 -->
           <div class="swiper-slide">
-            <div class="bg-white rounded-lg p-8 text-center border border-gray-200">
-              <img src="https://bpdataconsulting.com/static/web/img/team-3.jpg" alt="Alice Brown"
+            <div class="bg-white rounded-lg p-8 text-center shadow-xl">
+              <img src="https://bpdataconsulting.com/static/web/img/team-3.jpg" alt="Innocent Ngaruye"
                 class="w-24 h-24 rounded-full mx-auto mb-4">
               <h3 class="text-xl font-semibold">Innocent Ngaruye</h3>
-              <p class="text-gray-700">Director of AI Research and Training</p>
+              <p class="text-gray-700">Director of AI Research &amp; Training</p>
             </div>
           </div>
         </div>
-        <!-- Add Arrows -->
+        <!-- Navigation Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <!-- Add Pagination -->
+        <!-- Pagination -->
         <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
-
-
-  <!-- =============== CONTACT MODAL DIALOG =============== -->
-  <div id="contactModal" class="modal-overlay">
-    <div class="bg-white rounded-lg shadow-2xl p-8 max-w-xl w-full mx-4 relative" data-aos="zoom-in">
-      <!-- Close button -->
-      <button id="closeContactModal"
-        class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 focus:outline-none">
-        <i class="fas fa-times"></i>
-      </button>
-      <h2 class="text-2xl font-bold mb-6 text-center">Get In Touch</h2>
-      <form action="/contact/" method="POST" class="space-y-4">
-        <!-- Insert CSRF token if needed -->
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="text" name="fname" placeholder="First Name"
-            class="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-          <input type="text" name="lname" placeholder="Last Name"
-            class="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-        </div>
-        <input type="email" name="email" placeholder="Your Email"
-          class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required>
-        <input type="text" name="subject" placeholder="Subject"
-          class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required>
-        <textarea name="message" rows="5" placeholder="Message"
-          class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required></textarea>
-        <button type="submit"
-          class="w-full bg-blue-600 text-white py-3 rounded font-medium hover:bg-blue-500 transition">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
 
   <!-- =============== FOOTER =============== -->
   <footer class="bg-gray-900 text-gray-300 py-8">
     <div class="max-w-7xl mx-auto px-4 grid gap-8 md:grid-cols-3">
       <!-- Column 1: Contact Info -->
       <div data-aos="fade-up" class="text-center md:text-left">
-        <h3 class="text-center md:text-left font-bold text-white mb-4">B&amp;P Data Consulting</h3>
+        <h3 class="font-bold text-white mb-4">B&amp;P Data Consulting</h3>
         <p class="text-gray-400 mb-2">
           First Floor, Afriland Building<br>
           Marché Ndogpassi 3, Village - Douala
@@ -427,7 +345,6 @@
     </div>
   </footer>
 
-
   <!-- =============== BACK TO TOP BUTTON =============== -->
   <div id="backToTop" class="back-to-top" title="Back to top">
     <i class="fas fa-chevron-up"></i>
@@ -448,16 +365,18 @@
       });
     });
 
-    // VANTA.NET Background Effect on #hero with updated colors:
-    VANTA.NET({
+    VANTA.WAVES({
       el: "#hero",
-      color: 0xffffff,           // Whitish net lines
-      backgroundColor: 0x1e3a8a, // Dark shade of primary blue
-      points: 12.00,
-      maxDistance: 20.00,
-      spacing: 15.00
-    });
-
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x0d1b2a   // Background color behind the waves
+    })
+    
     // Initialize Swiper for the Team Slider
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
@@ -485,12 +404,9 @@
     const header = document.getElementById("header");
     const logo = header.querySelector("a");
     const navLinksContainer = document.getElementById("navLinks");
-
-    // Mobile Menu Toggle
     const menuBtn = document.getElementById("menuBtn");
-    // const mobileMenu = document.getElementById("mobileMenu");
 
-    window.addEventListener("scroll", () => {
+    function updateHeaderStyle() {
       if (window.scrollY > 10) {
         header.classList.remove("bg-transparent");
         header.classList.add("bg-white", "shadow-md");
@@ -510,8 +426,10 @@
         menuBtn.classList.add("text-white");
         menuBtn.classList.remove("text-gray-800");
       }
-    });
+    }
 
+    window.addEventListener("scroll", updateHeaderStyle);
+    document.addEventListener("DOMContentLoaded", updateHeaderStyle);
 
     // Mobile Menu Drawer Functionality
     const mobileMenu = document.getElementById("mobileMenu");
@@ -533,7 +451,6 @@
       mobileMenuOverlay.classList.add("hidden");
     });
 
-    // Hide drawer when a mobile nav link is clicked
     document.querySelectorAll(".nav-item-mobile").forEach(link => {
       link.addEventListener("click", () => {
         mobileMenu.classList.remove("translate-x-0");
@@ -541,18 +458,7 @@
       });
     });
 
-
-    // menuBtn.addEventListener("click", () => {
-    //   mobileMenu.classList.toggle("hidden");
-    // });
-
-    // document.querySelectorAll(".nav-item-mobile").forEach(link => {
-    //   link.addEventListener("click", () => {
-    //     mobileMenu.classList.add("hidden");
-    //   });
-    // });
-
-    // Back to Top Button
+    // Back to Top Button Functionality
     const backToTop = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
@@ -565,7 +471,7 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // Contact Modal Dialog: Open/Close for Footer button
+    // Contact Modal Dialog Functionality
     const footerContactBtn = document.getElementById("footerContactBtn");
     const contactModal = document.getElementById("contactModal");
     const closeContactModalBtn = document.getElementById("closeContactModal");
@@ -578,7 +484,6 @@
       contactModal.classList.remove("active");
     });
 
-    // Also close modal when clicking outside the dialog
     contactModal.addEventListener("click", (e) => {
       if (e.target === contactModal) {
         contactModal.classList.remove("active");
