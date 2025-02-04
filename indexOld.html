@@ -111,12 +111,10 @@
       </button>
       <!-- Desktop Menu -->
       <ul id="navLinks" class="hidden md:flex space-x-6 text-white font-medium transition-colors duration-300">
-        <li><a href="/"
-            class="nav-item-mobile bg-orange-500 text-white py-2 px-4 rounded-full elevation-1 outline-none">Home</a>
-        </li>
-        <li><a href="/about/" class="hover:text-orange-500">About</a></li>
-        <li><a href="/services/" class="hover:text-orange-500">Services</a></li>
-        <li><a href="/contacts/" class="hover:text-orange-500">Contact</a></li>
+        <li><a href="/" class="hover:text-blue-200">Home</a></li>
+        <li><a href="/about/" class="hover:text-blue-200">About</a></li>
+        <li><a href="/services/" class="hover:text-blue-200">Services</a></li>
+        <li><a href="/contacts/" class="hover:text-blue-200">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -130,10 +128,10 @@
       <i class="fas fa-times"></i>
     </button>
     <ul class="flex flex-col p-4 space-y-2">
-      <li><a href="/" class="text-orange-500 nav-item-mobile">Home</a></li>
-      <li><a href="/about/" class="nav-item-mobile hover:text-orange-500">About</a></li>
-      <li><a href="/services/" class="nav-item-mobile hover:text-orange-500">Services</a></li>
-      <li><a href="/contacts/" class="nav-item-mobile hover:text-orange-500">Contact</a></li>
+      <li><a href="/" class="nav-item-mobile hover:text-blue-600">Home</a></li>
+      <li><a href="/about/" class="nav-item-mobile hover:text-blue-600">About</a></li>
+      <li><a href="/services/" class="nav-item-mobile hover:text-blue-600">Services</a></li>
+      <li><a href="/contacts/" class="nav-item-mobile hover:text-blue-600">Contact</a></li>
     </ul>
   </div>
   <!-- Drawer Overlay -->
@@ -454,7 +452,7 @@
     VANTA.NET({
       el: "#hero",
       color: 0xffffff,           // Whitish net lines
-      backgroundColor: 0x0d1b2a, // Dark shade of primary blue
+      backgroundColor: 0x1e3a8a, // Dark shade of primary blue
       points: 12.00,
       maxDistance: 20.00,
       spacing: 15.00
@@ -492,9 +490,7 @@
     const menuBtn = document.getElementById("menuBtn");
     // const mobileMenu = document.getElementById("mobileMenu");
 
-
-    // Function to update header style based on scroll position
-    function updateHeaderStyle() {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
         header.classList.remove("bg-transparent");
         header.classList.add("bg-white", "shadow-md");
@@ -514,13 +510,8 @@
         menuBtn.classList.add("text-white");
         menuBtn.classList.remove("text-gray-800");
       }
-    }
+    });
 
-    // Listen for scroll events
-    window.addEventListener("scroll", updateHeaderStyle);
-
-    // Ensure header style is updated on page load
-    document.addEventListener("DOMContentLoaded", updateHeaderStyle);
 
     // Mobile Menu Drawer Functionality
     const mobileMenu = document.getElementById("mobileMenu");
@@ -549,6 +540,17 @@
         mobileMenuOverlay.classList.add("hidden");
       });
     });
+
+
+    // menuBtn.addEventListener("click", () => {
+    //   mobileMenu.classList.toggle("hidden");
+    // });
+
+    // document.querySelectorAll(".nav-item-mobile").forEach(link => {
+    //   link.addEventListener("click", () => {
+    //     mobileMenu.classList.add("hidden");
+    //   });
+    // });
 
     // Back to Top Button
     const backToTop = document.getElementById("backToTop");
